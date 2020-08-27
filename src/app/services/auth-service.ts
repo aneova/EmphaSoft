@@ -21,8 +21,7 @@ export class AuthService {
   }
 
   login(user: User): Observable<{token: string}> {
-    console.log(user);
-    return this.http.post<{token: string}>('http://emphasoft-test-assignment.herokuapp.com/api-token-auth/', user)
+    return this.http.post<{token: string}>('https://emphasoft-test-assignment.herokuapp.com/api-token-auth/', user)
       .pipe(
           tap(
             ({token}) => {

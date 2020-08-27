@@ -24,7 +24,7 @@ fetchUsers(): Observable <User[]> {
       const options = {
             headers
  };
-      return this.http.get<User[]>('http://emphasoft-test-assignment.herokuapp.com/api/v1/users/', options)
+      return this.http.get<User[]>('https://emphasoft-test-assignment.herokuapp.com/api/v1/users/', options)
         .pipe( tap(userList => this.userList = userList));
     }
 
