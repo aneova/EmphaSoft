@@ -1,0 +1,60 @@
+form {
+  border: 1rem solid #f1f1f1;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+  color: dimgray;
+}
+
+.input {
+  width: 75%;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 2px;
+  padding: 3rem;
+}
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #43a047;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  /* Add padding to containers */
+.container {
+  padding: 1rem;
+}
+
+}

@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="container">
+    <h3 class="center">EmphaSoft API</h3>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="uname" formControlName="username"  required>
+    <div class="validation" *ngIf="form.get('username').touched && form.get('username').invalid">
+                <small>Error: Username is required</small>
+    </div>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="psw" formControlName="password" required>
+      <div class="validation" *ngIf="form.get('password').touched && form.get('password').invalid">
+                 <small>Error: Password is required</small>
+    </div>
+    <button type="submit" >Login</button>
+  </div>
+</form>
