@@ -23,9 +23,7 @@ export class AuthComponent implements OnInit, OnDestroy {
 
     this.route.queryParams.subscribe((params: Params) => {
       if (params.registered){
-        // you can login with pass
       } else if (params.accessDenied) {
-        // You must auth
       }
     });
   }

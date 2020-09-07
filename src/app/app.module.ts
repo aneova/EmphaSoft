@@ -9,13 +9,15 @@ import { OverviewComponent } from './overview/overview.component';
 import {AppRoutingModule} from './app-routing.module';
 import {SiteLayoutComponent} from './shared/site-layout/site-layout.component';
 import {TokenInterceptor} from './classes/token.interceptor';
+import {UserFilterPipe} from './shared/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     OverviewComponent,
-    SiteLayoutComponent
+    SiteLayoutComponent,
+    UserFilterPipe,
   ],
   imports: [
     AppRoutingModule,

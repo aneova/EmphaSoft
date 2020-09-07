@@ -45,16 +45,76 @@ button:hover {
   padding: 1rem;
 }
 
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 
 @media screen and (max-width: 768px) {
   span.psw {
     display: block;
     float: none;
   }
-
-  /* Add padding to containers */
+h1{
+  font-size: 1rem;
+}
 .container {
   padding: 1rem;
 }
 
+table {
+  font-family: arial, sans-serif;
+  width: 400px;
+  margin: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+margin: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

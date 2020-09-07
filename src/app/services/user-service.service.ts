@@ -17,14 +17,7 @@ export class UserServiceService {
 
 fetchUsers(): Observable <User[]> {
 
-      const headers = new HttpHeaders({
-    'Content-Type': 'application/json',
- });
-      this.headers.append('Authorization', 'Bearer ' + localStorage.getItem('auth-token'));
-      const options = {
-            headers
- };
-      return this.http.get<User[]>('https://emphasoft-test-assignment.herokuapp.com/api/v1/users/', options)
+      return this.http.get<User[]>('https://emphasoft-test-assignment.herokuapp.com/api/v1/users/')
         .pipe( tap(userList => this.userList = userList));
     }
 

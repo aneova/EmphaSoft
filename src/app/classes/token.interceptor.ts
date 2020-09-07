@@ -13,7 +13,7 @@ export class TokenInterceptor implements HttpInterceptor {
     req = req.clone({
       setHeaders: {
           'Content-Type': 'application/json',
-          Authorization: `${token}`
+          Authorization: `Token ${token}`
       },
     });
 

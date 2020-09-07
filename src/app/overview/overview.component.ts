@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../services/auth-service';
+import {AuthService, User} from '../services/auth-service';
 import {Router} from '@angular/router';
 import {UserServiceService} from '../services/user-service.service';
 
@@ -9,14 +9,16 @@ import {UserServiceService} from '../services/user-service.service';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit {
-  username: any;
+  username: string;
+  userList: User[] = [];
+  sorted: boolean;
 
   constructor(private auth: AuthService, private route: Router, private userListService: UserServiceService) { }
 
   ngOnInit(): void {
     this.userListService.fetchUsers()
       .subscribe(() => {
-        console.log(this.userListService.userList);
+        this.userList = this.userListService.userList;
     });
   }
 
@@ -24,5 +26,17 @@ export class OverviewComponent implements OnInit {
     this.auth.setToken(null);
     this.route.navigate(['/']);
     localStorage.removeItem('auth-token');
+  }
+
+  sort(): void {
+    if (this.sorted)
+    {
+     this.userList.sort((a,b) => (b.id - a.id));
+     this.sorted = false;
+    }
+    else {
+      this.sorted = true;
+      this.userList.sort((a, b) => (a.id - b.id));
+    }
   }
 }
